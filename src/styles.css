@@ -1,0 +1,103 @@
+body  {
+    
+    background-color: #fffeff;
+  }
+/*border radius*/
+
+ .btn,
+ .jumbotron,
+ .nav :hover {
+     border-radius: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+
+ .name {
+    background: rgb(240, 189, 23);
+    color: #fff;
+    font-weight:bold;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+/* cart badge */
+
+.cart-badge,
+.cart-badge:hover {
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 600;
+    color: #000;
+    background: #fcff54;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+ /*product image on card*/
+ 
+ .product-img {
+     min-height: 200px;
+ }
+ 
+ .jumbotron h2 {
+     margin-top: -20px;
+ }
+ 
+ @media only screen and (max-width: 600px) {
+     .jumbotron h2 {
+         margin-top: 10px;
+     }
+ }
+ 
+ /** jumbotron animation*/
+ 
+ .jumbotron {
+     width: wh;
+     height: 30vh;
+     color: #fff;
+     background: linear-gradient(-30deg, #e40ad9, #639df3, #44ebe2, #f822e6);
+     background-size: 300% 300%;
+     -webkit-animation: Gradient 15s ease infinite;
+     -moz-animation: Gradient 15s ease infinite;
+     animation: Gradient 15s ease infinite;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ @-webkit-keyframes Gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0% 50%;
+     }
+ }
+ 
+ @-moz-keyframes Gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0% 50%;
+     }
+ }
+ 
+ @keyframes Gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0% 50%;
+     }
+ }
+ 
