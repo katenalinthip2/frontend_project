@@ -1,6 +1,6 @@
 body  {
     
-    background-color: #fffeff;
+    background-color: #fceefc;
   }
 /*border radius*/
 
@@ -11,13 +11,83 @@ body  {
      font-family: Arial, Helvetica, sans-serif;
  }
  
+ .form-check {
+    color: rgb(238, 65, 151);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+    background: #f7cccc;
+    border-radius: 1em;
+    box-shadow: #f12929;
+    padding: 15px;
+    width: 100px;
+    height: 2.5em;
+    
+ }
+ .title {
+    color: rgb(238, 65, 151);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:bold;
+    font-size: 30px;
+    background: #f7cccc;
+    border-radius: 1em;
+    box-shadow: #f12929;
+    padding: 15px;
+    width: max-content;
+    max-height: fit-content;
+    max-width: fit-content;
+    
+ }
+
+ .bview {
+     color:   #0a0c0e ;
+     margin-top: 10px;
+     margin-left: 6em;
+     background-color:#ffffff  ;
+     width: 5em;
+     height: 3em;
+     border-radius: 50px;
+     border: 1px solid rgb(172, 144, 250);
+     transition-duration: 0.4s;
+     justify-items: center;
+     font-family: 'Courier New', Courier, monospace;
+ }
+ .bview:hover {
+    background-color: #154360; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .bKitchen {
+    color:   #f741c0 ;
+    font-weight: bolder;
+    background-color: #ffffff;
+    width: 5em;
+    height: 3em;
+    border-radius: 50px;
+    border: 1px solid rgb(245, 165, 202);
+    transition-duration: 0.4s;
+    justify-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.bKitchen:hover {
+   background-color: #f88eef; 
+   color: white;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
 
  .name {
-    background: rgb(240, 189, 23);
-    color: #fff;
+    background: #024959;
+    margin-left: 5em;
+    margin-right: 5em;
+    flex-basis: auto;
+    color: rgb(255, 255, 255);
     font-weight:bold;
-    font-size: 25px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    box-shadow: #f12929;
 } 
 
 /* cart badge */
@@ -25,12 +95,12 @@ body  {
 .cart-badge,
 .cart-badge:hover {
     border-radius: 50%;
-    padding: 2px;
+    padding: 3px;
     font-size: 15px;
     font-style: italic;
     font-weight: 600;
-    color: #000;
-    background: #fcff54;
+    color: rgb(255, 255, 255);
+    background: #f12929;
     font-family: Arial, Helvetica, sans-serif;
     
 }
@@ -38,7 +108,7 @@ body  {
  /*product image on card*/
  
  .product-img {
-     min-height: 200px;
+     min-height: 50px;
  }
  
  .jumbotron h2 {
@@ -57,13 +127,16 @@ body  {
      width: wh;
      height: 30vh;
      color: #fff;
-     background: linear-gradient(-30deg, #e40ad9, #639df3, #44ebe2, #f822e6);
-     background-size: 300% 300%;
-     -webkit-animation: Gradient 15s ease infinite;
-     -moz-animation: Gradient 15s ease infinite;
-     animation: Gradient 15s ease infinite;
+     background: linear-gradient(-30deg, #70016b, #f363ec, #fd9adc, #ffd1fb);
+     background-size: 30% 100%;
+     -webkit-animation: Gradient 50s ease infinite;
+     -moz-animation: Gradient 50s ease infinite;
+     animation: Gradient 50s ease infinite;
      font-family: Arial, Helvetica, sans-serif;
- }
+     background-image: url("D:\backup kate\front end\src\img\ซื้อ1แถม1.jpg");
+     
+     
+}
  
  @-webkit-keyframes Gradient {
      0% {

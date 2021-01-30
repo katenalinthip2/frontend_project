@@ -104,7 +104,7 @@ const AddProduct = () => {
 
 
             <div className="form-group">
-                <label className="text-muted">ชื่อ</label>
+                <label className="text-muted">Name</label>
                 <input
                     onChange={handleChange("name")}
                     type="text"
@@ -123,7 +123,7 @@ const AddProduct = () => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">ราคา</label>
+                <label className="text-muted">Price</label>
                 <input
                     onChange={handleChange("price")}
                     type="number"
@@ -133,7 +133,7 @@ const AddProduct = () => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">ประเภท</label>
+                <label className="text-muted">Category</label>
                 <select
                     onChange={handleChange("category")}
                     className="form-control"
@@ -149,18 +149,19 @@ const AddProduct = () => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">ส่งโปรดัก</label>
+                <label className="text-muted">Product</label>
                 <select
                     onChange={handleChange("shipping")}
                     className="form-control"
                 >
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                    
                 </select>
             </div>
 
             <div className="form-group">
-                <label className="text-muted">ปริมาณ</label>
+                <label className="text-muted">Quantity</label>
                 <input
                     onChange={handleChange("quantity")}
                     type="number"

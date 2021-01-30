@@ -9,7 +9,7 @@ const View = props => {
     const [product, setProduct] = useState({});
     const [relatedProduct, setRelatedProduct] = useState([]);
     const [error, setError] = useState(false);
-
+ console.log(error);
     //read product จาก DB เรียกใช้ที่ apicore
     const loadSingleProduct = productId => {
         read(productId).then(data => {

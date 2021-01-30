@@ -3,6 +3,7 @@ import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import { getPurchaseHistory } from "./apiUser";
+import {getStatusValues} from "../admin/apiAdmin";
 
 const Dashboard = () => {
 
@@ -38,11 +39,7 @@ const Dashboard = () => {
                             My Cart
                         </Link>
                     </li>
-                    <li className="list-group-item">
-                        <Link className="nav-link" to={`/profile/${_id}`}>
-                            Update Profile
-                        </Link>
-                    </li>
+                    
                 </ul>
             </div>
         );
@@ -53,8 +50,8 @@ const Dashboard = () => {
             <div className="card mb-5">
                 <h3 className="card-header">User Information</h3>
                 <ul className="list-group">
-                    <li className="list-group-item">{name}</li>
-                    <li className="list-group-item">{email}</li>
+                    {/* <li className="list-group-item">{name}</li> */}
+                    {/* <li className="list-group-item">{email}</li> */}
                     <li className="list-group-item">
                         {role === 1 ? "Admin" : "Registered User name  :   "}{`${name}`}
                     </li>
@@ -77,8 +74,9 @@ const Dashboard = () => {
                                             <div key={i}>
                                                 <h6>Order name: {p.name}</h6>
                                                 <h6>
-                                                    price: ${p.price}
+                                                    price: {p.price}฿
                                                 </h6>
+                                                <h6> Status : {p.getStatusValues}</h6>
 
                                             </div>
                                         );

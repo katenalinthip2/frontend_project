@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import ShowImage from "./ShowImage";
 import { addItem, updateItem, removeItem } from "./cartHelpers";
-
+import "../styles.css";
 
 //description -> substring (0, 50) กำหนดความยาวในการอธิบายข้อมูลของเมนูใต้ภาพได้ 50 ตัวอักษร
 
@@ -22,8 +22,8 @@ const Card = ({
     const showViewButton = showViewProductButton => {
         return (
             showViewProductButton && (
-                <Link to={`/product/${product._id}`} className="mr-2">
-                    <button className="btn btn-outline-primary mt-2 mb-2">
+                <Link to={`/product/${product._id}`} className="mr-4">
+                    <button className="bview">
                         View
                     </button>
                 </Link>
@@ -47,8 +47,8 @@ const Card = ({
     //ปุ่มAddToKitchen
     const showAddToKitchen = (showAddToCartButton) => {
         return showAddToCartButton && (
-            <button onClick={addToKitchen} className="btn btn-outline-warning mt-2 mb-2">
-                Add to Kitchen
+            <button onClick={addToKitchen} className="bKitchen">
+                Add 
             </button>
         );
     };
