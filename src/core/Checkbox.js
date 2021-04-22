@@ -23,12 +23,12 @@ const Checkbox = ({ categories, handleFilters }) => {
 
 
     return categories.map((c, i) => (
-        <li key={i} className="form-check">
+        <li key={i} className="form-check ">
             <input onChange={handleToggle(c._id)}
                 value={checked.indexOf(c._id === -1)}
                 type="checkbox"
                 for="flexCheckChecked"
-                className="form-check-input" />
+                className="form-check-input mr-3 ml-8 mb-1" />
             <label className="form-check-label">{c.name}</label>
         </li>
     ));

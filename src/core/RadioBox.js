@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles.css";
 
 const RadioBox = ({ prices, handleFilters }) => {
     const [value, setValue] = useState(0);
@@ -19,7 +20,7 @@ const RadioBox = ({ prices, handleFilters }) => {
                 value={`${p._id}`}
                 name={p}
                 type="radio"
-                className="mr-1 ml-8"
+                className="mr-3 ml-8 mb-2"
             />
             <label className="form-check-label">{p.name}</label>
         </div>
