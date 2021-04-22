@@ -1,13 +1,14 @@
 import React from "react";
 import { API } from "../config";
+import "../styles.css";
 
 const ShowImage = ({ item, url }) => (
-    <div className="product-img">
+    <div className="img">
         <img
             src={`${API}/${url}/photo/${item._id}`}
             alt={item.name}
-            className="mb-3"
-            style={{ maxHeight: "100%", maxWidth: "100%" }}
+            className="img"
+            style={{ Height: "80%", Width: "100%" }}
         />
     </div>
 );

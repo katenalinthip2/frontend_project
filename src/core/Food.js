@@ -46,7 +46,7 @@ const Food = () => {
             <h2 className="mb-4 ml-5">New Arrivals</h2>
             <div className="row">
                 {productsByArrival.map((product, i) => (
-                    <div key={i} className="col-4 mb-3 ">
+                    <div key={i} className="col-3 ml-5 mb-3 mr-5 ">
                         <Card product={product} />
                     </div>
                 ))}
@@ -56,7 +56,7 @@ const Food = () => {
             <h2 className="mb-4 ml-5">Best Sellers</h2>
             <div className="row">
                 {productsBySell.map((product, i) => (
-                    <div key={i} className="col-4 mb-3">
+                    <div key={i} className="col-3 ml-5 mb-3 mr-5">
                         <Card product={product} />
                     </div>
                 ))}

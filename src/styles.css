@@ -129,7 +129,13 @@ body  {
 /************************** img ******************/
 
 .img {
-
+    height: 200px;
+    width: 200px;
+    justify-items: center;
+    text-align: center;
+    margin: auto auto;
+    border-radius: 10%;
+    margin-bottom: 1em;
 }
 
 
