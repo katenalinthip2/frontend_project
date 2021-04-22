@@ -24,7 +24,7 @@ const Cart = () => {
         return (
             <div>
                 <h2>รายการอาหารที่คุณเลือกมี {`${items.length}`} รายการ</h2>
-                <Link to="/food">กลับไปยังหน้าสั่งอาหาร</Link>
+               <h5> <Link to="/food">กลับไปยังหน้าสั่งอาหาร</Link></h5> 
                 <hr />
                 {items.map((product, i) => (
                     <Card key={i}
@@ -41,9 +41,9 @@ const Cart = () => {
     };
 
     const noItemsMessage = () => (
-        <h2>
+        <h4 className="ml-4">
             ไม่มีรายการอาหารที่สั่ง <br /> <Link to="/food">กลับไปยังหน้าสั่งอาหาร</Link>
-        </h2>
+        </h4>
     );
 
     return (

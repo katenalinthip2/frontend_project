@@ -42,12 +42,12 @@ const Orders = () => {
     const showOrdersLength = () => {
         if (orders.length > 0) {
             return (
-                <h1 className="text-danger display-2">
+                <h1 className="text-danger ml-5">
                     Total orders: {orders.length}
                 </h1>
             );
         } else {
-            return <h1 className="text-danger">No orders</h1>;
+            return <h3 className="text-danger">No orders</h3>;
         }
     };
 
@@ -113,13 +113,13 @@ const Orders = () => {
                                 key={oIndex}
                                 style={{ borderBottom: "5px solid indigo" }}
                             >
-                                <h2 className="mb-5">
-                                    <span className="bg-primary">
+                                <h3 className="mb-3">
+                                    <span className="">
                                         Order by: {o.user.name}
                                     </span>
-                                </h2>
+                                </h3>
 
-                                <ul className="list-group mb-2">
+                                <ul className="list-group mb-1">
                                     <li className="list-group-item">
                                         {showStatus(o)}
                                     </li>
@@ -128,24 +128,24 @@ const Orders = () => {
 
                                 </ul>
 
-                                <h3 className="mt-4 mb-4 font-italic">
+                                <h4 className="mt-4 mb-4 font-italic">
                                     Total products in the order:{" "}
                                     {o.products.length}
-                                </h3>
+                                </h4>
 
                                 {o.products.map((p, pIndex) => (
                                     <div
                                         className="mb-4"
                                         key={pIndex}
                                         style={{
-                                            padding: "20px",
+                                            padding: "10px",
                                             border: "1px solid indigo"
                                         }}
                                     >
                                         {showInput(" name", p.name)}
-                                        {showInput(" price", p.price)}
+                        
                                         {showInput(" total", p.count)}
-                                        {showInput(" Id", p._id)}
+                                     
                                     </div>
                                 ))}
                             </div>

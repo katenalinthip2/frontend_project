@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./Layout";
 import { getProducts, getBraintreeClientToken, processPayment, createOrder } from "./apiCore";
-import Card from "./Card";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import "braintree-web";
@@ -140,16 +138,19 @@ const Checkout = ({ products }) => {
             className="alert alert-info"
             style={{ display: success ? "" : "none" }}
         >
-            รับออเดอร์ของคุณแล้ว ดูรายการอาหารของคุณได้ที่ Dashboard
+            Receive your order and view your food items on the Dashboard.
         </div>
     );
 
     const showLoading = loading =>
-        loading && <h2 className="text-danger">กำลังดำเนินการ...</h2>;
+        loading && <h2 className="text-danger"> กำลังดำเนินการ...</h2>;
 
     return (
         <div>
-            <h2>Total: ${getTotal()}</h2>
+            <h2>Total: {getTotal()}  ฿</h2>
+            <h5> Please fill in the details : </h5>
+            <h6> Card Number : 4111 1111 1111 1111</h6>
+            <h6> Expiration Date : 02/24 </h6>
             {showLoading(data.loading)}
             {showSuccess(data.success)}
             {showError(data.error)}
