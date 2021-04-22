@@ -105,7 +105,7 @@ const Card = ({
             showRemoveProductButton && (
                 <button
                     onClick={() => removeItem(product._id)}
-                    className="btn btn-outline-danger mt-2 mb-2"
+                    className="bRemove"
                 >
                     Remove
                 </button>
@@ -120,8 +120,8 @@ const Card = ({
             <div className="card-body">
                 {shouldRedirect(redirect)}
                 <ShowImage item={product} url="products" />
-                <p className="lead mt-2"> {product.description.substring(0, 50)}</p>
-                <p className="black-9">${product.price}</p>
+                
+                <p className="CardPrice"> Price  : {product.price} ฿ </p>
 
                 {showStock(product.quantity)}
                 <br />
