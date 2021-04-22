@@ -160,9 +160,10 @@ body  {
 
 .cart-badge,
 .cart-badge:hover {
-    border-radius: 50%;
+    border-radius: 30%;
     padding: 3px;
-    font-size: 15px;
+    border-color: #0a0c0e;
+    font-size: 12px;
     font-style: italic;
     font-weight: 600;
     color: rgb(255, 255, 255);
@@ -206,6 +207,91 @@ body  {
      
 }
  
+
+/********************icon ******************/
+
+.iHome{
+    background-image: url("D:\backup kate\Project\front end\src\img\house(2).png");
+    margin-right: 7em;
+    background-size: 40px 33px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: 5px;
+}
+
+.iFood{
+    background-image: url("D:\backup kate\Project\front end\src\img\romantic-dinner.png");
+    margin-right: 7em;
+    background-size: 43px 33px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: 5px;
+}
+
+.iDboard{
+    background-image: url("D:\backup kate\Project\front end\src\img\employee.png");
+    margin-right: 4em;
+    background-size: 48px 36px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: xx-small;
+}
+
+.iSearch{
+    background-image: url("D:\backup kate\Project\front end\src\img\loupe.png");
+    margin-right: 7em;
+    background-size: 45px 32px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: 5px;
+}
+
+.iCart{
+    background-image: url("D:\backup kate\Project\front end\src\img\shopping-cart.png");
+    margin-right: 7em;
+    background-size: 48px 36px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: 5px;
+}
+
+.iOut{
+    background-image: url("D:\backup kate\Project\front end\src\img\log-out.png");
+    margin-right: 2em;
+    background-size: 48px 36px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: xx-small;
+}
+
+.iIn{
+    background-image: url("D:\backup kate\Project\front end\src\img\login.png");
+    margin-right: 7em;
+    background-size: 42px 28px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: 5px;
+}
+
+.iUp{
+    background-image: url("D:\backup kate\Project\front end\src\img\add-user.png");
+    margin-right: 7em;
+    background-size: 43px 28px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    justify-items: center;
+    font-size: 5px;
+}
+
+
+
  @-webkit-keyframes Gradient {
      0% {
          background-position: 0% 50%;
