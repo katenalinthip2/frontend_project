@@ -38,7 +38,7 @@ const AdminDashboard = () => {
 
                     <li className="list-group-item">
                         <Link className="nav-link" to="/admin/products">
-                            Products
+                           Mange Products
                         </Link>
                     </li>
 

@@ -51,16 +51,7 @@ const Menu = ({ history }) => (
                 </Link>
             </li>
 
-            <li className="iSearch">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/search")}
-                    to="/search"
-                >
-                    ______
-                </Link>
-            </li>
-
+            
             {isAuthenticated() && isAuthenticated().user.role === 0 && (
                 <li className="iDboard">
                     <Link
@@ -73,6 +64,7 @@ const Menu = ({ history }) => (
                 </li>
             )}
 
+
             {isAuthenticated() && isAuthenticated().user.role === 1 && (
                 <li className="iDboard">
                     <Link
@@ -84,6 +76,15 @@ const Menu = ({ history }) => (
                     </Link>
                 </li>
             )}
+<li className="iSearch">
+                <Link
+                    className="nav-link"
+                    style={isActive(history, "/search")}
+                    to="/search"
+                >
+                    ______
+                </Link>
+            </li>
 
 
             {!isAuthenticated() && (
