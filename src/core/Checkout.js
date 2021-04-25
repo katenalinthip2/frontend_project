@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { getProducts, getBraintreeClientToken, processPayment, createOrder } from "./apiCore";
+import {  getBraintreeClientToken, processPayment, createOrder } from "./apiCore";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import "braintree-web";
 import DropIn from "braintree-web-drop-in-react";
 import { emptyCart } from "./cartHelpers";
-
+// eslint-disable-next-line
 const Checkout = ({ products }) => {
 
 
@@ -34,7 +34,9 @@ const Checkout = ({ products }) => {
 
 
     useEffect(() => {
+        // eslint-disable-next-line
         getToken(userId, token);
+        // eslint-disable-next-line
     }, []);
 
     const getTotal = () => {
@@ -54,8 +56,10 @@ const Checkout = ({ products }) => {
     };
 
     const buy = () => {
+        // eslint-disable-next-line
         setData({ loading: true });
         let nonce;
+        // eslint-disable-next-line
         let getNonce = data.instance
             .requestPaymentMethod()
             .then(data => {

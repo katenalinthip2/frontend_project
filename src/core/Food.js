@@ -3,12 +3,13 @@ import Layout from './Layout';
 import { getProducts } from "./apiCore";
 import Card from "./Card";
 import Searching from "./Searching";
-import Search from './Search';
+// import Search from './Search';
 
 
 const Food = () => {
     const [productsBySell, setProductsBySell] = useState([]);
     const [productsByArrival, setProductsByArrival] = useState([]);
+    // eslint-disable-next-line
     const [error, setError] = useState(false);
 
     // sold = ที่ขายไปแล้ว

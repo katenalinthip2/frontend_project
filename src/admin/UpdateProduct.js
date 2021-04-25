@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
-import { Link, Redirect } from "react-router-dom";
+import {  Redirect } from "react-router-dom";
 import { getProduct, getCategories, updateProduct } from "./apiAdmin";
 
 const UpdateProduct = ({ match }) => {
@@ -27,7 +27,8 @@ const UpdateProduct = ({ match }) => {
         description,
         price,
         categories,
-        category,
+        // eslint-disable-next-line
+        category,// eslint-disable-next-line
         shipping,
         quantity,
         loading,
@@ -74,7 +75,9 @@ const UpdateProduct = ({ match }) => {
     };
 
     useEffect(() => {
+        // eslint-disable-next-line
         init(match.params.productId);
+        // eslint-disable-next-line
     }, []);
 
     const handleChange = name => event => {

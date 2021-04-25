@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
-import { Link } from "react-router-dom";
 import { createProduct, getCategories } from "./apiAdmin";
 
 const AddProduct = () => {
@@ -26,13 +25,13 @@ const AddProduct = () => {
         name,
         description,
         price,
-        categories,
-        category,
+        categories,// eslint-disable-next-line
+        category,// eslint-disable-next-line
         shipping,
         quantity,
         loading,
         error,
-        createdProduct,
+        createdProduct,// eslint-disable-next-line
         redirectToProfile,
         formData
     } = values;
@@ -54,7 +53,9 @@ const AddProduct = () => {
     };
 
     useEffect(() => {
+        // eslint-disable-next-line
         init();
+        // eslint-disable-next-line
     }, []);
 
 

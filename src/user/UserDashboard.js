@@ -3,7 +3,6 @@ import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import { getPurchaseHistory } from "./apiUser";
-import {getStatusValues} from "../admin/apiAdmin";
 
 const Dashboard = () => {
 
@@ -11,6 +10,7 @@ const Dashboard = () => {
 
 
     const {
+        // eslint-disable-next-line
         user: { _id, name, email, role }
     } = isAuthenticated();
 
@@ -25,7 +25,9 @@ const Dashboard = () => {
         });
     };
     useEffect(() => {
+        // eslint-disable-next-line
         init(_id, token);
+        // eslint-disable-next-line
     }, []);
 
 

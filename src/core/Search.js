@@ -12,8 +12,9 @@ const Search = () => {
         filters: { category: [], price: [] }
     });
     const [categories, setCategories] = useState([]);
-
+    // eslint-disable-next-line
     const [error, setError] = useState(false);
+    // eslint-disable-next-line
     const [limit, setLimit] = useState(3);
     const [skip, setSkip] = useState(0);
     const [size, setSize] = useState(0);
@@ -75,8 +76,8 @@ const Search = () => {
 
     // list เมนูอาหารทั้งหมดจากฐานข้อมูล
     useEffect(() => {
-        init();
-        loadFilteredResults(skip, limit, myFilters.filters);
+        init();// eslint-disable-next-line
+        loadFilteredResults(skip, limit, myFilters.filters);// eslint-disable-next-line
     }, []);
 
     //filters = filters in category
@@ -98,7 +99,7 @@ const Search = () => {
     const handlePrice = value => {
         const data = prices;
         let array = [];
-
+        // eslint-disable-next-line
         for (let key in data) {
             if (data[key]._id === parseInt(value)) {
                 array = data[key].array;

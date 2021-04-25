@@ -1,7 +1,9 @@
+// eslint-disable-next-line
 import React, { useState, useEffect } from "react";
 import "../styles.css";
 
 const RadioBox = ({ prices, handleFilters }) => {
+    // eslint-disable-next-line
     const [value, setValue] = useState(0);
 
 
