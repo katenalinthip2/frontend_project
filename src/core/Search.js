@@ -76,8 +76,9 @@ const Search = () => {
 
     // list เมนูอาหารทั้งหมดจากฐานข้อมูล
     useEffect(() => {
-        init();// eslint-disable-next-line
-        loadFilteredResults(skip, limit, myFilters.filters);// eslint-disable-next-line
+        init();
+        loadFilteredResults(skip, limit, myFilters.filters); 
+        // eslint-disable-next-line
     }, []);
 
     //filters = filters in category

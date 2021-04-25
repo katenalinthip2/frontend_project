@@ -3,31 +3,31 @@ import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import { getPurchaseHistory } from "./apiUser";
+import axios from 'axios'
 
 const Dashboard = () => {
+    const [history, setHistory] = useState([])
 
-    const [history, setHistory] = useState([]);
-
-
+    const token = isAuthenticated().token
+    axios.defaults.headers.common = {
+        'Authorization': 'Bearer ' + token
+    };
     const {
         // eslint-disable-next-line
         user: { _id, name, email, role }
     } = isAuthenticated();
 
-    const token = isAuthenticated().token;
-    const init = (userId, token) => {
-        getPurchaseHistory(userId, token).then(data => {
-            if (data.error) {
-                console.log(data.error);
-            } else {
-                setHistory(data);
-            }
-        });
-    };
+    const getUserOrder = async ()  => {
+        let result = await (await axios.get(`https://arcane-atoll-35730.herokuapp.com/api/orders/by/user/`+_id))
+        console.log('result - > ')
+        console.log(result.data);
+        setHistory(result.data)
+        }
+
+    
+
     useEffect(() => {
-        // eslint-disable-next-line
-        init(_id, token);
-        // eslint-disable-next-line
+        getUserOrder()
     }, []);
 
 
@@ -70,6 +70,7 @@ const Dashboard = () => {
                         {history.map((h, i) => {
                             return (
                                 <div>
+                                    
                                     <hr />
                                     {h.products.map((p, i) => {
                                         return (
@@ -78,8 +79,8 @@ const Dashboard = () => {
                                                 <h6>
                                                     price: {p.price}฿
                                                 </h6>
-                                                <h6> Status : {p.getStatusValues}</h6>
-
+                                                <h6> Status : {h.status}</h6>
+                                                
                                             </div>
                                         );
                                     })}

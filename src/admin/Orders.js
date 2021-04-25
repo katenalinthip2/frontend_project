@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { listOrders, getStatusValues, updateOrderStatus } from "./apiAdmin";
-
+import axios from 'axios';
 const Orders = () => {
+
+
     const [orders, setOrders] = useState([]);
     const [statusValues, setStatusValues] = useState([]);
 
@@ -24,6 +26,7 @@ const Orders = () => {
     //สถานะอาหาร
     const loadStatusValues = () => {
         getStatusValues(user._id, token).then(data => {
+            console.log(data);
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -33,6 +36,7 @@ const Orders = () => {
     };
     useEffect(() => {
         loadOrders(); 
+        
         // eslint-disable-next-line
         loadStatusValues();
         // eslint-disable-next-line
@@ -84,12 +88,15 @@ const Orders = () => {
 
     const showStatus = o => (
         <div className="form-group">
-            <h3 className="mark mb-4">Status: {o.status}</h3>
+            <h3 className="mark mb-4"> Status: {o.status}</h3>
+            
             <select
                 className="form-control"
                 onChange={e => handleStatusChange(e, o._id)}
             >
+                
                 <option>Update Status</option>
+                
                 {statusValues.map((status, index) => (
                     <option key={index} value={status}>
                         {status}
@@ -97,7 +104,10 @@ const Orders = () => {
                 ))}
             </select>
         </div>
+        
     );
+
+
 
     return (
         <Layout
@@ -116,17 +126,15 @@ const Orders = () => {
                             >
                                 <h3 className="mb-3">
                                     <span className="">
-                                        Order by: {o.user.name}
+                                        Order by: {o.user.name} 
                                     </span>
                                 </h3>
 
                                 <ul className="list-group mb-1">
                                     <li className="list-group-item">
                                         {showStatus(o)}
+                                        
                                     </li>
-
-
-
                                 </ul>
 
                                 <h4 className="mt-4 mb-4 font-italic">
@@ -144,7 +152,6 @@ const Orders = () => {
                                         }}
                                     >
                                         {showInput(" name", p.name)}
-                        
                                         {showInput(" total", p.count)}
                                      
                                     </div>
